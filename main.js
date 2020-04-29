@@ -108,7 +108,7 @@ const buildDucks = (ducksCollection) => {
     const duck = ducksCollection[i];
 
     domString += '<div class="card-seperation col-md-6 col-lg-4" style="width: 18rem;">'
-    domString += `<img src="${duck.imageUrl}" class="card-img-top rounded mx-auto d-block">`
+    domString += `<img src=${duck.imageUrl} class="card-img-top rounded mx-auto d-block"/>`
     domString += '<div class="card-body">'
     domString += `<h5 class="card-title">${duck.name}</h5>`
     domString += '<ul class="list-group list-group-flush">'
@@ -125,6 +125,16 @@ const buildDucks = (ducksCollection) => {
 domString += '</div>';
 
   printToDom('#duckContainer', domString);
+};
+
+const clickEvents = () => {
+  document.getElementById('small').addEventListener('click', filterDucks);
+  document.getElementById('medium').addEventListener('click', filterDucks);
+  document.getElementById('large').addEventListener('click', filterDucks);
+  document.getElementById('male').addEventListener('click', filterDucks);
+  document.getElementById('female').addEventListener('click', filterDucks);
+  document.getElementById('rubber').addEventListener('click', filterDucks);
+  document.getElementById('all').addEventListener('click', filterDucks);
 };
 
 const filterDucks = (event) => {
@@ -152,19 +162,9 @@ const filterDucks = (event) => {
   buildDucks(duckies);
 };
 
-const clickEvents = () => {
-  document.querySelector('#small').addEventListener('click', filterDucks);
-  document.querySelector('#medium').addEventListener('click', filterDucks);
-  document.querySelector('#large').addEventListener('click', filterDucks);
-  document.querySelector('#male').addEventListener('click', filterDucks);
-  document.querySelector('#female').addEventListener('click', filterDucks);
-  document.querySelector('#rubber').addEventListener('click', filterDucks);
-  document.querySelector('#all').addEventListener('click', filterDucks);
-};
-
 const init = () => {
-  buildDucks(ducks);
   clickEvents();
+  buildDucks(ducks);
 };
 
 init();
