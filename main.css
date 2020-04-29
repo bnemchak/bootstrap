@@ -1,3 +1,26 @@
 body {
   background-color: aquamarine;
 }
+
+
+#ducks {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+.ducks {
+  text-align: center;
+  justify-content: space-evenly;
+  align-content: center;
+  float: left;
+  width: 200px;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid rebeccapurple;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.ducks img {
+  width: 200px;
+}
