@@ -4,12 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ducks</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="main.css"> -->
 </head>
 <body>
   <h1>More Ducks</h1>
 
-  <div id="ducks"></div>
+ <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+    <button id="small" data-filter="size" type="button" class="btn btn-secondary">Small</button>
+    <button id="medium" data-filter="size" type="button" class="btn btn-secondary">Medium</button>
+    <button id="large" data-filter="size" type="button" class="btn btn-secondary">Large</button>
+  </div>
+
+  <div class="btn-group mr-2" role="group" aria-label="Second group">
+    <button id="male" data-filter="gender" type="button" class="btn btn-secondary">Male</button>
+    <button id="female" data-filter="gender" type="button" class="btn btn-secondary">Female</button>
+  </div>
+
+  <div class="btn-group" role="group" aria-label="Third group">
+    <button id="rubber" data-filter="isRubber" type="button" class="btn btn-secondary">Rubber</button>
+  </div>
+
+  <div class="btn-group" role="group" aria-label="Fourth group">
+    <button id="all" type="button" class="btn btn-dark">Reset</button>
+  </div>
+
+  <div id="duckContainer" class="container"></div>
 
   <script src="main.js"></script>
 </body>
